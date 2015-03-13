@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main1">#F9F9F9</color> <!-- 背景 -->
+    <color name="main2">#89B1BB</color>
+    <color name="main3">#ADADAD</color> <!-- 選択 2-->
+    <color name="main4">#51DAF9</color> <!-- 選択 -->
+    <color name="main5">#7A7A7A</color> <!-- テキスト -->
+    <color name="white">#ffffff</color>
+</resources>

@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:background="@color/main1">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:text="@string/reset"
+            android:textColor="@color/main5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/ic_menu_add"
+            android:background="@drawable/button_menu"
+            android:width="@dimen/menu_size"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_pen"
+            android:text="@string/pen"
+            android:textColor="@color/main5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/ic_menu_edit"
+            android:background="@drawable/button_menu"
+            android:width="@dimen/menu_size"/>
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:text="@string/undo"
+            android:textColor="@color/main5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/ic_menu_revert"
+            android:background="@drawable/button_menu"
+            android:width="@dimen/menu_size"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:text="@string/save"
+            android:textColor="@color/main5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/ic_menu_save"
+            android:width="@dimen/menu_size"
+            android:background="@drawable/button_menu"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            class="jp.tkcdroid.drawapp.view.DrawView"
+            android:id="@+id/drawView"
+            />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/menu_pen"
+                      android:background="@color/main1"
+                      android:orientation="vertical"
+                      android:visibility="gone"
+                      android:layout_alignParentRight="true"
+                      android:layout_alignParentEnd="true"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentStart="true">
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                              android:layout_width="wrap_content"
+                              android:layout_height="fill_parent"
+                              android:id="@+id/menu_pen_color"
+                              android:background="@color/main1"
+                              android:orientation="horizontal">
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:layout_width="match_parent"
+                          android:layout_height="@dimen/drawer_height"
+                          android:background="@color/main1"
+                          android:orientation="horizontal">
+
+                <view
+                    android:layout_width="@dimen/menu_size"
+                    android:layout_height="@dimen/menu_size"
+                    android:layout_margin="@dimen/button_size_margin"
+                    class="jp.tkcdroid.drawapp.view.PenPreviewView"
+                    android:id="@+id/pen_preview"
+                    android:background="@drawable/preview_stroke"
+                    />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/drawer_height"
+                              android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/pen_size_seek_size_margin"
+                        android:layout_marginRight="@dimen/pen_size_seek_size_margin"
+                        android:textColor="@color/main5"
+                        android:id="@+id/pen_size"/>
+
+                    <SeekBar
+                        android:id="@+id/pen_size_seek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progress="@string/default_pen_size"
+                        android:max="99"
+                        android:layout_gravity="bottom"
+                        android:longClickable="false"
+                        android:layout_marginLeft="@dimen/pen_size_seek_size_margin"
+                        android:layout_marginRight="@dimen/pen_size_seek_size_margin"
+                        android:progressDrawable="@drawable/seekbar_menu" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

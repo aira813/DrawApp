@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="pen_size_seek_size_margin">2dp</dimen>
+    <dimen name="menu_size">60dp</dimen>
+    <dimen name="button_size_margin">2dp</dimen>
+    <dimen name="drawer_height">64dp</dimen>
+</resources>

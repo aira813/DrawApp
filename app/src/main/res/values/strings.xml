@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">おえかき</string>
+    <string name="reset">しんき</string>
+    <string name="undo">もどす</string>
+    <string name="save">ほぞん</string>
+    <string name="saved">ほぞんしたよ</string>
+    <string name="pen">ぺん</string>
+    <string name="directory">/MyPic/</string>
+    <string name="pic_name_format">yyyyMMdd_HHmmss</string>
+    <string name="default_pen_size">2</string>
+</resources>
