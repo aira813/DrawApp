@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">drawing</string>
+    <string name="reset">new</string>
+    <string name="undo">back</string>
+    <string name="save">save</string>
+    <string name="saved">saved</string>
+    <string name="pen">pen</string>
+</resources>
